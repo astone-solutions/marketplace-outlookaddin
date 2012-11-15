@@ -11,10 +11,10 @@
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo Outlook Addin Marketplace package</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <properties>
-    <marketplace.outlookaddin.version>1.0-SNAPSHOT</marketplace.outlookaddin.version>
+    <marketplace.outlookaddin.version>1.0</marketplace.outlookaddin.version>
 	<nuxeo.outlookaddin.version>5.6</nuxeo.outlookaddin.version>
   </properties>
 
