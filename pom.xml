@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.nuxeo.ecm.distribution</groupId>
+    <artifactId>nuxeo-distribution</artifactId>
+    <version>5.6</version>
+  </parent>
+
+  <groupId>org.nuxeo.marketplace.outlookaddin</groupId>
+  <artifactId>parent</artifactId>
+  <packaging>pom</packaging>
+  <name>Nuxeo Outlook Addin Marketplace package</name>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <marketplace.outlookaddin.version>1.0-SNAPSHOT</marketplace.outlookaddin.version>
+	<nuxeo.outlookaddin.version>5.6</nuxeo.outlookaddin.version>
+  </properties>
+
+  <modules>
+    <module>ear</module>
+    <module>marketplace</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.nuxeo.marketplace.outlookaddin</groupId>
+        <artifactId>ear</artifactId>
+        <version>${marketplace.outlookaddin.version}</version>
+        <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.marketplace.outlookaddin</groupId>
+        <artifactId>marketplace</artifactId>
+        <version>${marketplace.outlookaddin.version}</version>
+        <type>zip</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <repositories>
+    <repository>
+      <id>public</id>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>public-snapshot</id>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <scm>
+    <connection>scm:git:git://github.com/astone-solutions/NuxeoOutlookAddin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:astone-solutions/NuxeoOutlookAddin.git</developerConnection>
+    <url>https://github.com/astone-solutions/NuxeoOutlookAddin</url>
+  </scm>
+
+</project>
